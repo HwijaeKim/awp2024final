@@ -1,0 +1,184 @@
+@charset "UTF-8";
+
+/*body {*/
+/*    background-image: url("../sources/profile.jpg");*/
+/*    background-position: calc(80%);*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: calc(500px);*/
+/*}*/
+
+section#sec1 {
+    width: 100%;
+    height: 100vh;
+}
+
+
+#title_typing {
+    /*display: inline;*/
+    position: absolute;
+    font-weight: 200;
+    font-size: 18vmin;
+    letter-spacing: -.4rem;
+    line-height: 19vmin;
+    animation: title_ani 1s ease 0s 1 normal forwards;
+
+}
+section#sec1 p {
+    font-weight: 200;
+    font-size: 2.3vmin;
+}
+section#sec1 img {
+    display: inline;
+    /*position: relative;*/
+    z-index: -1;
+}
+
+
+
+/*SECTOR 2*/
+section#sec2 {
+    /*border: solid 1px red;*/
+    margin-top: 15vmin;
+    width: 100%;
+    /*height: 100vh;*/
+}
+article#sector2_contents {
+    /*border: solid 1px blue;*/
+    display: flex;
+    flex-flow: row wrap;
+    width: 140vmin;
+    margin: 0 auto;
+}
+.img_container {
+    /*border: solid 1px green;*/
+    width: 55vmin;
+    height: 30vmin;
+}
+.img_container img {
+    width: 75%;
+    object-fit: cover;
+    filter: drop-shadow(0 0 25px rgba(0,0,0,.4));
+}
+.text_container {
+    display: flex;
+    flex-direction: column;
+    width: 70vmin;
+}
+.img_title {
+    /*border: solid 1px orange;*/
+    height: 23vmin;
+
+    font-size: 10vmin;
+    font-weight: 900;
+    letter-spacing: -.05em;
+    line-height: 1.1;
+    word-break: keep-all;
+}
+.img_little_title {
+
+    /*border: solid 1px orange;*/
+
+    height: 5vmin;
+
+    font-size: 2.5vmin;
+    font-weight: 300;
+    letter-spacing: -.05em;
+    line-height: 1.1;
+    word-break: keep-all;
+
+    padding-bottom: 1vmin;
+    border-bottom: solid .5px darkgray;
+}
+.img_sub {
+    /*border: solid 1px red;*/
+    margin-top: 1vmin;
+    font-size: 2.2vmin;
+    font-weight: 700;
+
+    width: 100%;
+    height: 35vmin;
+    word-break: keep-all;
+    column-count: 2;
+    column-gap: 20px;
+
+    line-height: 1.5;
+}
+
+
+
+
+/*SECTOR 3*/
+section#sec3 {
+    margin-top: 1vmin;
+    width: 100%;
+}
+section#sec3 #img_container {
+    display: flex;
+    /*flex-direction: row;*/
+    /*flex-wrap: wrap;*/
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: baseline;
+
+
+    margin: 0 auto;
+    width: 70%;
+    height: 100%;
+}
+.imgs {
+    /*display: flex;*/
+    /*border: solid 1px blue;*/
+    width: 55vmin;
+    height: 55vmin;
+    margin-bottom: 8vmin;
+    overflow: hidden;
+    /*text-align: center;*/
+}
+.imgs img {
+    /*border: solid 1px green;*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 이미지가 container를 꽉 채우도록 설정 */
+    object-position: center; /* 이미지가 중앙에 위치하도록 설정 */
+}
+.imgs video {
+    /*border: solid 1px green;*/
+    width: 100%;
+    height: 100%;
+    /*vertical-align: middle;*/
+    object-fit: cover; /* 이미지가 container를 꽉 채우도록 설정 */
+    object-position: center; /* 이미지가 중앙에 위치하도록 설정 */
+}
+.modal_img video {
+    /*border: solid 1px green;*/
+    width: 100%;
+    /*height: 100%;*/
+    /*vertical-align: middle;*/
+    object-fit: cover; /* 이미지가 container를 꽉 채우도록 설정 */
+    object-position: center; /* 이미지가 중앙에 위치하도록 설정 */
+    position: relative;
+    top: 25%;
+}
+.text {
+    /*border: solid 1px red;*/
+    width: 55vmin;
+    height: 55vmin;
+    position: absolute;
+    color: white;
+    text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    align-content: center;
+    text-align: center;
+    font-weight: 900;
+    font-size: 4vmin;
+    word-break: keep-all;
+    opacity: 0;
+    z-index: 1;
+}
+.imgs:hover .text {
+     opacity: 1;
+     animation: imageHover .3s ease 0s 1 normal forwards;
+ }
+.imgs:hover img, .imgs:hover video {
+    filter: brightness(0.35);
+    transition: ease .3s;
+}
